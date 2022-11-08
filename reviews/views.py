@@ -194,7 +194,7 @@ def review_update(request, store_pk, review_pk):
         return render(request, "reviews/review_form.html", context)
     else:
         messages.warning(request, "작성자만 수정할 수 있습니다.")
-        return redirect("articles:detail", review.pk)
+        return redirect("reviews:review_detail", review.pk)#?
 
 
 def search(request):
